@@ -18,15 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from products.views import home  # 👈 import the view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
+    path('', home, name='home'),         # 👈 this is the home route
     path('products/', include('products.urls')),
+    path('users/', include('users.urls')),
     path('cart/', include('cart.urls')),
     path('payments/', include('payments.urls')),
     path('documents/', include('documents.urls')),
-
+   
 ]
 
 if settings.DEBUG:
