@@ -2,10 +2,26 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+
+<style>
+  .imperial-script-logo {
+    font-family: "Imperial Script", cursive;
+    font-size: 72px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+  }
+</style>
+
 <!-- Hero -->
 <div class="jumbotron text-center bg-white py-5">
-  <h1 class="display-4">Just In: New Arrivals</h1>
-  <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">Shop Now</a>
+  <h1 class="imperial-script-logo">Modest Muse</h1>
+  <h2 class="display-4">Just In: New Arrivals</h2>
+  <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg mt-3">Shop Now</a>
 </div>
 
 <!-- Categories -->
